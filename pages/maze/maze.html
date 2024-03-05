@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="maze.css">
+</head>
+<div class="landing-page">
+    <header>
+      <div class="container">
+        <a href="#" class="logo">Your <b>BINGO!</b></a>
+        <ul class="links">
+         <li><a href="/home.html" class="nav-link" target="_blank">Home</a></li>
+         <li><a href="#" class="nav-link" target="_blank">Info</a></li>
+         <li><a href="/pages/about us/aboutus.html" class="nav-link" target="_blank">About Us</a></li>
+         <li><a href="https://discord.com/api/oauth2/authorize?client_id=1068175404814323722&permissions=19456&scope=bot%20applications.commands" class="nav-link" target="_blank">Invite</a></li>
+         <li><a href="https://discord.gg/jhcCnEdeDM" class="nav-link" target="_blank">Support Server</a></li>
+        </ul>
+      </div>
+    </header>
+<body>
+    <svg>
+        <g></g>
+        <circle id="ball" r="6"/>
+    </svg>
+    <p>Use the arrow buttons to move the dot. Touch/hover the center to see how to reach it.<br/>Reload to get a new maze with <a href="javascript:init('prims')">short</a>, <a href="javascript:init('depthFirst')">long</a> or unbiased <a href="javascript:init('wilsons')">random</a> corridors.</p>
+    <div id="direct" class="col">
+        <div class="row"><button id="btnUp1">↑</button><button id="btnUp2">↑</button></div>
+        <div class="row spaced"><button id="btnLeft">←</button><button id="btnRight">→</button></div>
+        <div class="row"><button id="btnDown">↓</button></div>
+    </div>
+
+    <script src="maze.js"></script>
+</body>
+</html>
+
+  
+    
+    

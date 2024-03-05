@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="landing-page">
+    <header>
+      <div class="container">
+        <a href="#" class="logo">Your <b>BINGO!</b></a>
+        <ul class="links">
+         <li><a href="#" class="nav-link" target="_blank">Home</a></li>
+         <li><a href="#" class="nav-link" target="_blank">Info</a></li>
+         <li><a href="/pages/about us/aboutus.html" class="nav-link" target="_blank">About Us</a></li>
+         <li><a href="https://discord.com/api/oauth2/authorize?client_id=1068175404814323722&permissions=19456&scope=bot%20applications.commands" class="nav-link" target="_blank">Invite</a></li>
+         <li><a href="https://discord.gg/jhcCnEdeDM" class="nav-link" target="_blank">Support Server</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="content">
+      <div class="container">
+        <div class="info">
+          <h1>BINGO!</h1>
+          <p>Bingo Bot is a Discord bot designed to facilitate and manage online Bingo games within Discord servers.<br> 
+            you can create and host Bingo games, <br>
+            invite players to join, 
+            <br>generate unique Bingo cards for each player, and<br> 
+            call out numbers during the game. </p>
+            <button class="button-link" onclick="window.open('https://discord.gg/jhcCnEdeDM', '_blank')">Support Server</button>
+            <button class="button-link" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=1068175404814323722&permissions=19456&scope=bot%20applications.commands', '_blank')">Bot Invite</button>
+        </div>
+        <div class="canvas-container">
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="image">
+          <img src="bingo.png" alt="Image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js" defer></script>
+</body>
+</html>

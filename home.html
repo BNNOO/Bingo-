@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINGO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="bingo">BINGO!</h1>
+    <script>
+       const h1 = document.querySelector('h1');
+
+h1.addEventListener('mouseenter', function() {
+    const randomColor1 = getRandomColor();
+    const randomColor2 = getRandomColor();
+    const randomColor3 = getRandomColor();
+    h1.dataset.effect = '';
+    h1.style.setProperty('--color-1', randomColor1);
+    h1.style.setProperty('--color-2', randomColor2);
+    h1.style.setProperty('--color-3', randomColor3);
+});
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+setTimeout(function() {
+            window.location.href = 'http://127.0.0.1:5500/pages/mainpage/main.html#'; // Replace with your desired URL
+        }, 10000); // 10000 milliseconds = 10 seconds
+    </script>
+    
+</body>
+</html>

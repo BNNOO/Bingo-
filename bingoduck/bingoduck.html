@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINGO & Ducklings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="bingo">BINGO!</h1>
+
+    <div class="wrapper">
+        <!-- remove display: none from marker class to see these -->
+        <div class="marker red"></div>
+        <div class="marker blue"></div>
+        <div class="marker yellow"></div>
+        <div class="marker pink"></div>
+        <div class="marker green"></div>
+        <div class="marker purple"></div>
+    
+        <div class="duck down">
+            <div class="neck-base">
+                <div class="neck">
+                    <div class="head"></div>
+                </div>
+            </div>
+            <div class="tail"></div>
+            <div class="body"></div>
+            <div class="legs">
+                <div class="leg"></div>
+                <div class="leg"></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="create-duckling"></button>
+    
+    <div class="indicator"></div>
+    <div class="sign">
+        by masahito / <a href="http://www.ma5a.com/" >ma5a.com</a>
+    </div>
+
+    <script>
+        const h1 = document.querySelector('#bingo');
+
+        h1.addEventListener('mouseenter', function() {
+            const randomColor1 = getRandomColor();
+            const randomColor2 = getRandomColor();
+            const randomColor3 = getRandomColor();
+            h1.dataset.effect = '';
+            h1.style.setProperty('--color-1', randomColor1);
+            h1.style.setProperty('--color-2', randomColor2);
+            h1.style.setProperty('--color-3', randomColor3);
+        });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
